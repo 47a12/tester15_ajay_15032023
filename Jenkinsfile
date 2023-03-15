@@ -25,11 +25,7 @@ pipeline{
             steps{
                 invokeLambda([awsRegion: 'eu-west-1',
 			functionName: 'ajay', 
-			payload = {
-  "subnet_id": "ajay",
-  "name": "ajay ",
-  "email": "ajay"
-})
+
 	}
 }
             }
