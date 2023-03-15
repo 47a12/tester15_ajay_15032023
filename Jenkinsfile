@@ -27,7 +27,11 @@ pipeline{
                     --function-name 'terminate-instance' \
                     --invocation-type Event \
                     --payload = {
+  payload = {
   
+  "name": "ajay singh ",
+  "email": "ajaysinghkushwah733@gmail.com"
+}
 }
             }
         }
