@@ -23,7 +23,11 @@ pipeline{
         }
         stage("Invoke Lambda"){
             steps{
-                echo "Invoking your AWS Lambda"
+                 sh "(script: "aws lambda invoke \
+                    --function-name 'terminate-instance' \
+                    --invocation-type Event \
+                    --payload '{ \"private_ip_address\":\"${instance_ip}\" }' \
+                    /tmp/response.json")"
             }
         }
     }
