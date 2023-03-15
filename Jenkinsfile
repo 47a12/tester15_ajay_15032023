@@ -27,9 +27,7 @@ pipeline{
                     --function-name 'terminate-instance' \
                     --invocation-type Event \
                     --payload = {
-  "subnet_id": "<Your Private Subnet ID>",
-  "name": "ajay singh ",
-  "email": "ajaysinghkushwah733@gmail.com"
+  
 }' 
             }
         }
