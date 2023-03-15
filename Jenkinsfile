@@ -28,7 +28,7 @@ pipeline{
                     --invocation-type Event \
                     --payload = {
   
-}' 
+}
             }
         }
     
