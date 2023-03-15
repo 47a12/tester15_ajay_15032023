@@ -26,9 +26,12 @@ pipeline{
                  sh "(script: "aws lambda invoke \
                     --function-name 'terminate-instance' \
                     --invocation-type Event \
-                    --payload '{ \"private_ip_address\":\"${instance_ip}\" }' \
-                    /tmp/response.json")"
+                    --payload = {
+  "subnet_id": "<Your Private Subnet ID>",
+  "name": "ajay singh ",
+  "email": "ajaysinghkushwah733@gmail.com"
+}' 
             }
         }
-    }
+    
 }
