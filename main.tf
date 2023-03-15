@@ -83,9 +83,9 @@ source_dir  = "${path.module}/python/"
 output_path = "${path.module}/python/hello-python.zip"
 }
 
-resource "aws_lambda_function" "terraform_lambda_func" {
+resource "aws_lambda_function" "ajay" {
 filename                       = "${path.module}/python/hello-python.zip"
-function_name                  = "terminate-instance"
+function_name                  = "ajay"
 role                           = aws_iam_role.lambda_role.arn
 handler                        = "index.lambda_handler"
 runtime                        = "python3.8"
