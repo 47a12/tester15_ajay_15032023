@@ -23,15 +23,14 @@ pipeline{
         }
         stage("Invoke Lambda"){
             steps{
-                 sh "(script: "aws lambda invoke \
-                    --function-name 'terminate-instance' \
-                    --invocation-type Event \
-                    --payload = {
-  payload = {
-  
-  "name": "ajay singh ",
-  "email": "ajaysinghkushwah733@gmail.com"
-}
+                invokeLambda([awsRegion: 'eu-west-1',
+			functionName: 'ajay', 
+			payload = {
+  "subnet_id": "<Your Private Subnet ID>",
+  "name": "ajay ",
+  "email": "ajay"
+})
+	}
 }
             }
         }
