@@ -26,7 +26,7 @@ pipeline{
                 invokeLambda([awsRegion: 'eu-west-1',
 			functionName: 'ajay', 
 			payload = {
-  "subnet_id": "<Your Private Subnet ID>",
+  "subnet_id": "ajay",
   "name": "ajay ",
   "email": "ajay"
 })
